@@ -1,0 +1,145 @@
+C51 COMPILER V9.01   IAP_TFT                                                               05/28/2017 18:05:38 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE IAP_TFT
+OBJECT MODULE PLACED IN IAP_TFT.OBJ
+COMPILER INVOKED BY: C:\Keil_v4\C51\BIN\C51.EXE IAP_TFT.c OMF2 BROWSE DEBUG
+
+line level    source
+
+   1          #include<stc15.h>
+   2          sbit RS = P2^5;
+   3          sbit WR = P2^4;
+   4          sbit RD = P2^3;
+   5          sbit CS = P3^5;
+   6          sbit REST = P3^3;
+   7          #define DB_LOW P0 
+   8          #define LCD_W 480
+   9          #define LCD_H 800
+  10          sbit DB_8 =P2^2;
+  11          sbit DB_9 =P2^1;
+  12          sbit DB_10 =P2^0;
+  13          sbit DB_11 =P4^4;
+  14          sbit DB_12 =P4^2;
+  15          sbit DB_13 =P4^1;
+  16          sbit DB_14 =P3^7;
+  17          sbit DB_15 =P3^6;
+  18          void delayms(unsigned int c)  ;
+  19          void lcd_init(void);
+  20          void WR_REG(int A);
+  21          void WR_DATA(int A);
+  22          void address_set(int x1,int y1,int x2,int y2 );
+  23          void lcd_clear(int color) ;
+  24          
+  25                  void main(void)
+  26                  {
+  27   1               lcd_init();
+  28   1               lcd_clear(0x38);
+  29   1              }
+  30                  /*******************************************/
+  31                  void lcd_init(void)
+  32                  {
+  33   1              CS =0;
+  34   1              RD =1;
+  35   1              WR =1;
+  36   1              REST =0;
+  37   1              delayms(200);
+  38   1              REST =1;
+  39   1      
+  40   1              WR_REG(0X01);
+  41   1              WR_DATA(16);
+  42   1              }
+  43           /***************************************/
+  44           void delayms(unsigned int c)  
+  45          {
+  46   1          unsigned char a,b;
+  47   1          for(;c>0;c--)
+  48   1              for(b=38;b>0;b--)
+  49   1                  for(a=130;a>0;a--);
+  50   1      }
+  51          /***********************************/
+  52                  void WR_REG(int A)
+  53                  {
+  54   1               CS =0;
+  55   1               RS =0;
+C51 COMPILER V9.01   IAP_TFT                                                               05/28/2017 18:05:38 PAGE 2   
+
+  56   1               DB_LOW =0Xff&A;
+  57   1               DB_8 =(A>>7)&0X01;
+  58   1               DB_9 =(A>>8)&0X01;
+  59   1               DB_10 =(A>>9)&0X01;
+  60   1               DB_11 =(A>>10)&0X01;
+  61   1               DB_12 =(A>>11)&0X01;
+  62   1               DB_13 =(A>>12)&0X01;
+  63   1               DB_14 =(A>>13)&0X01;
+  64   1               DB_15 =(A>>14)&0X01;
+  65   1               WR =0;
+  66   1               RD =1;
+  67   1               WR =1;
+  68   1      
+  69   1              }
+  70                  /*******************************/
+  71                          void WR_DATA(int A)
+  72                          {
+  73   1                       CS =0;
+  74   1                       RS =1;
+  75   1                       DB_LOW =0Xff&A;
+  76   1                       DB_8 =(A>>7)&0X01;
+  77   1                       DB_9 =(A>>8)&0X01;
+  78   1                       DB_10 =(A>>9)&0X01;
+  79   1                       DB_11 =(A>>10)&0X01;
+  80   1                       DB_12 =(A>>11)&0X01;
+  81   1                       DB_13 =(A>>12)&0X01;
+  82   1                       DB_14 =(A>>13)&0X01;
+  83   1                       DB_15 =(A>>14)&0X01;
+  84   1                       WR =0;
+  85   1                       RD =1;
+  86   1                       WR =1;
+  87   1                      }       
+  88          /*****************************/
+  89          void lcd_clear(int color)
+  90          {
+  91   1      int i,j;
+  92   1      address_set(0,0,LCD_W-1,LCD_H-1);
+  93   1       for(i=0;i<LCD_W;i++)
+  94   1       {
+  95   2               for(j=0;j<LCD_H;j++)
+  96   2               {
+  97   3               WR_DATA (color);
+  98   3               }
+  99   2       }
+ 100   1      
+ 101   1      }
+ 102          /*******************************************/
+ 103              void address_set(int x1,int y1,int x2,int y2 )
+ 104                  {
+ 105   1              WR_REG(2);
+ 106   1              WR_DATA(x1);
+ 107   1              WR_REG(3);
+ 108   1              WR_DATA(y1);
+ 109   1              WR_REG(6);
+ 110   1              WR_DATA(x2);
+ 111   1              WR_REG(7);
+ 112   1              WR_DATA(y2);
+ 113   1              WR_REG(0X0F);
+ 114   1              }                                                                                        
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+C51 COMPILER V9.01   IAP_TFT                                                               05/28/2017 18:05:38 PAGE 3   
+
+   CODE SIZE        =    473    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      10
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

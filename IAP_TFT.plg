@@ -1,0 +1,110 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+E:\书房\1#专项组\workstation\keil\IAP_TFT\IAP_TFT.uvproj
+Project File Date:  05/28/2017
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling IAP_TFT.c...
+IAP_TFT.C(11): error C202: 'led': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling IAP_TFT.c...
+linking...
+Program Size: data=9.0 xdata=0 const=0 code=16
+"IAP_TFT" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling IAP_TFT.c...
+linking...
+Program Size: data=9.0 xdata=0 const=0 code=16
+"IAP_TFT" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling IAP_TFT.c...
+linking...
+Program Size: data=9.0 xdata=0 const=0 code=16
+"IAP_TFT" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling IAP_TFT.c...
+IAP_TFT.C(28): warning C206: 'delayms': missing function-prototype
+IAP_TFT.C(28): error C267: 'delayms': requires ANSI-style prototype
+Target not created
+compiling IAP_TFT.c...
+IAP_TFT.C(28): warning C206: 'delayms': missing function-prototype
+IAP_TFT.C(28): error C267: 'delayms': requires ANSI-style prototype
+IAP_TFT.c - 1 Error(s), 1 Warning(s).
+compiling IAP_TFT.c...
+IAP_TFT.C(28): warning C206: 'delayms': missing function-prototype
+IAP_TFT.C(28): error C267: 'delayms': requires ANSI-style prototype
+IAP_TFT.c - 1 Error(s), 1 Warning(s).
+compiling IAP_TFT.c...
+IAP_TFT.C(33): warning C206: 'WR_REG': missing function-prototype
+IAP_TFT.C(33): error C267: 'WR_REG': requires ANSI-style prototype
+IAP_TFT.c - 1 Error(s), 1 Warning(s).
+compiling IAP_TFT.c...
+IAP_TFT.C(27): error C132: 'main': not in formal parameter list
+IAP_TFT.C(27): error C141: syntax error near '{'
+IAP_TFT.C(28): error C132: 'lcd_init': not in formal parameter list
+IAP_TFT.C(29): error C141: syntax error near '0x38'
+IAP_TFT.C(29): error C132: 'lcd_clear': not in formal parameter list
+IAP_TFT.C(30): error C141: syntax error near '}'
+IAP_TFT.C(92): error C202: 'VH': undefined identifier
+IAP_TFT.C(93): error C202: 'VL': undefined identifier
+IAP_TFT.c - 8 Error(s), 0 Warning(s).
+compiling IAP_TFT.c...
+IAP_TFT.C(27): error C132: 'main': not in formal parameter list
+IAP_TFT.C(27): error C141: syntax error near '{'
+IAP_TFT.C(28): error C132: 'lcd_init': not in formal parameter list
+IAP_TFT.C(29): error C141: syntax error near '0x38'
+IAP_TFT.C(29): error C132: 'lcd_clear': not in formal parameter list
+IAP_TFT.C(30): error C141: syntax error near '}'
+IAP_TFT.c - 6 Error(s), 0 Warning(s).
+compiling IAP_TFT.c...
+IAP_TFT.C(113): warning C290: missing return value
+IAP_TFT.c - 0 Error(s), 1 Warning(s).
+compiling IAP_TFT.c...
+IAP_TFT.C(113): warning C290: missing return value
+IAP_TFT.c - 0 Error(s), 1 Warning(s).
+compiling IAP_TFT.c...
+IAP_TFT.C(104): error C231: '_address_set': redefinition
+IAP_TFT.C(114): error C231: '_address_set': redefinition
+IAP_TFT.c - 2 Error(s), 0 Warning(s).
+compiling IAP_TFT.c...
+IAP_TFT.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=19.0 xdata=0 const=0 code=488
+creating hex file from "IAP_TFT"...
+"IAP_TFT" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=19.0 xdata=0 const=0 code=488
+creating hex file from "IAP_TFT"...
+"IAP_TFT" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=19.0 xdata=0 const=0 code=488
+creating hex file from "IAP_2"...
+"IAP_2" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling IAP_TFT.c...
+linking...
+Program Size: data=19.0 xdata=0 const=0 code=488
+creating hex file from "IAP_2"...
+"IAP_2" - 0 Error(s), 0 Warning(s).
+compiling IAP_TFT.c...
+IAP_TFT.c - 0 Error(s), 0 Warning(s).
+compiling IAP_TFT.c...
+IAP_TFT.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=19.0 xdata=0 const=0 code=488
+creating hex file from "IAP_2"...
+"IAP_2" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=19.0 xdata=0 const=0 code=488
+creating hex file from "IAP_2"...
+"IAP_2" - 0 Error(s), 0 Warning(s).
